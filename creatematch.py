@@ -1,10 +1,11 @@
 import pyautogui
 import placetowers
 import gameend
+from datetime import datetime
 
 scroll_pos = (1750, 550)
 
-def create_match():
+def create_match(successful_runs):
     # PLAY
     pyautogui.click(x=850, y=900, interval=0.1)
     # EXPERT
@@ -17,6 +18,11 @@ def create_match():
     pyautogui.click(x=1250, y=450, interval=3)
     # OK
     pyautogui.click(x=950, y=750, interval=0.5)
+
+    # Start time
+    #start_time = datetime.now()
+
+    # Place all towers
     placetowers.monkey_village(scroll_pos)
     placetowers.sniper_monkey(scroll_pos)
     placetowers.alchemist()
@@ -28,4 +34,4 @@ def create_match():
 
     running = True
     pyautogui.moveTo(10, 10)
-    gameend.game_end(running)
+    gameend.game_end(running, successful_runs)
