@@ -1,6 +1,6 @@
 import pyautogui
-from placetowers import *
-from creatematch import *
+import placetowers
+import gameend
 
 scroll_pos = (1750, 550)
 
@@ -17,10 +17,14 @@ def create_match():
     pyautogui.click(x=1250, y=450, interval=3)
     # OK
     pyautogui.click(x=950, y=750, interval=0.5)
-    monkey_village(scroll_pos)
-    sniper_monkey(scroll_pos)
-    alchemist()
-    
+    placetowers.monkey_village(scroll_pos)
+    placetowers.sniper_monkey(scroll_pos)
+    placetowers.alchemist()
+
     #Play button
     pyautogui.click(x=1800, y=1000, clicks=2, interval=0.1)
     pyautogui.click(x=960, y=540)
+
+    running = True
+    pyautogui.moveTo(10, 10)
+    gameend.game_end(running)
