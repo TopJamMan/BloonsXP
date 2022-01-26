@@ -20,6 +20,7 @@ def create_match():
     placetowers.monkey_village(scroll_pos)
     placetowers.sniper_monkey(scroll_pos)
     placetowers.alchemist()
+    placetowers.xp_farm(scroll_pos)
 
     #Play button
     pyautogui.click(x=1800, y=1000, clicks=2, interval=0.1)

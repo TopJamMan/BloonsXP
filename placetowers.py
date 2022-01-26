@@ -37,5 +37,20 @@ def alchemist():
     pyautogui.click(x=330, y=500, clicks=4, interval=0.1)
     pyautogui.click(x=330, y=650, clicks=2, interval=0.1)
 
-def xp_farm():
-    return
+def xp_farm(scroll_pos):
+    # Click screen centre to close menus
+    pyautogui.click(x=960, y=540)
+
+    # Scroll to position
+    pyautogui.moveTo(scroll_pos[0], scroll_pos[1])
+    for i in range(0, 7):
+        pyautogui.scroll(1)
+
+    # Select and place Dart Monkey (Opens upgrade window)
+    pyautogui.click(x=1800, y=200)
+    pyautogui.click(x=125, y=575, clicks=2, interval=0.1)
+
+    # Upgrade Sniper Monkey
+    pyautogui.click(x=1550, y=500, clicks=4, interval=0.1)
+    pyautogui.click(x=1550, y=650, clicks=4, interval=0.1)
+    pyautogui.click(x=1550, y=800, clicks=4, interval=0.1)
