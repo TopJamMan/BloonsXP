@@ -1,3 +1,4 @@
+'''
 from datetime import datetime
 import time
 
@@ -7,3 +8,8 @@ end_time = start_time - datetime.now()
 
 
 print(end_time.strftime('%m'))
+'''
+
+import pyautogui
+
+print(pyautogui.pixelMatchesColor(950, 400, (255, 219, 0)))

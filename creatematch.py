@@ -5,7 +5,7 @@ from datetime import datetime
 
 scroll_pos = (1750, 550)
 
-def create_match(successful_runs):
+def create_match(successful_runs, level_ups):
     # PLAY
     pyautogui.click(x=850, y=900, interval=0.1)
     # EXPERT
@@ -34,4 +34,4 @@ def create_match(successful_runs):
 
     running = True
     pyautogui.moveTo(10, 10)
-    gameend.game_end(running, successful_runs)
+    gameend.game_end(running, successful_runs, level_ups)
