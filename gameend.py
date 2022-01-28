@@ -11,10 +11,10 @@ def game_end(running, successful_runs, level_ups):
             running = False
             #end_time = start_time - datetime.now()
             successful_runs += 1
+            print('')
             print('Game ended. Restarting.')
             #print('This game took: =', end_time.strftime('%M:%S'))
             print('Total successful runs:', successful_runs)
-            print('')
             pyautogui.click(x=950, y=900, interval=0.5)
             pyautogui.click(x=700, y=850, interval=3)
             creatematch.create_match(successful_runs, level_ups)
